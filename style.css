@@ -1,0 +1,294 @@
+:root{
+    --Pale-Violet-head-app: hsl(276, 100%, 81%);
+    --chat-left-txt: hsl(276, 55%, 52%);
+    --chat-right-txt: hsl(271, 15%, 43%);
+    --placeholder-txt: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+
+
+    /* Gradients */
+
+    --gradient-1: hsl(293, 100%, 63%);
+    --gradient-2: hsl(264, 100%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --bg-app: hsl(270, 20%, 96%);
+    --btn-submit: hsl(271, 36%, 24%);
+    --radio-btn-outline: hsl(289, 100%, 72%);
+}
+
+
+body{
+    padding: 0;
+   margin: 0;
+   font-family: 'Rubik', sans-serif;
+   overflow: hidden;
+   height: 100vh;
+   
+}
+.main{
+   margin: 0 auto;
+    max-width: 1000px;
+    height: 90%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.right-container{
+    width: 50%;
+    
+}
+.right-container::after{
+    content: '';
+    width: 500px;
+    height: 80%;
+    background: rgb(245, 243, 247);
+    border-radius: 48% 50% 0 0;
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.title-right{
+    font-size: 45px;
+}
+.paragraph-right{
+    width: 80%;
+    color: var(--paragraph);
+    line-height: 25px;
+}
+.main::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 30%;
+    height: 80%;
+    border-radius: 0 0 60% 60%;
+    background: linear-gradient(to bottom, var(--gradient-1)
+    , var(--gradient-2));
+}
+.smartphone{
+    padding: 10px;
+    width: 350px;
+    height: 70%;
+    min-height: 700px;
+    background-color: var(--white);
+    box-shadow: 1px 1px 2px 1px rgb(124, 124, 124);
+    border-radius: 40px;
+}
+.smartphone-header{
+    height: 70px;
+    border-radius: 40px 40px 10px 10px;
+    padding: 20px;
+    background: linear-gradient(to left, 
+    var(--gradient-1), var(--gradient-2));
+    position: relative;
+    
+}
+.smartphone-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    
+    left: 85px;
+    background-color: var(--white);
+    width: 50%;
+    border-radius: 0 0 20px 20px;
+    height: 25px;
+}
+.info{
+    display: flex;
+    color: white;
+    height: 50%;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+.back{
+    transform: rotate(-15deg);
+    margin-right: 15px;
+}
+.info .avatar{
+    width: 40px;
+    
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.info-person span{
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+
+}
+
+.name{
+    font-size: 18px;
+}
+.estado{
+    font-size: 12px;
+}
+.sandwich{
+    width: 20px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    color: var(--white);
+    align-self: flex-end;
+}
+
+.smartphone-main{
+    height: 90%;
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.chat{
+    width: 90%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    
+    min-height: 100%;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 12px;
+}
+.wrapper{
+    background-color: hsl(270, 20%, 96%);
+    
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+}
+
+.person-1{
+    width: 60%;
+    color: var(--chat-left-txt);
+    background-color: rgba(226, 225, 225, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    align-self: start;
+}
+.person-2{
+    width: 60%;
+    align-self: end;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white) ;
+    color: var(--chat-right-txt);
+}
+.dog-container{
+    width: 100%;
+    background-color: transparent !important;
+    text-align: end;
+}
+.dog-img{
+    width: 70px;
+    border-radius: 20px;
+}
+.plan {
+    background:  linear-gradient(to right, 
+    var(--gradient-1), var(--gradient-2));
+    width: 80%;
+    border-radius: 20px 20px 20px 0px;
+    ;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    display: flex;
+}
+
+.input-group{
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    
+    
+
+}
+.input-group input{
+    width: 100%;
+    height: 60%;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+    
+}
+.send{
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    width: 40px;
+    height: 50%;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    border: none;
+    background-color: var(--btn-submit) ;
+}
+.plan{
+    color: var(--white);
+}
+.price-plan{
+    font-weight: 700;
+    font-size: 22px;
+}
+.circle{
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--radio-btn-outline);
+    
+}
+
+
+@media (max-width: 1100px) {
+    body{
+        overflow: visible;
+        height: 100%;
+    }
+    .main{
+        margin: 50px 0;
+        flex-direction: column;
+        
+    }
+
+    .main::before{
+        width: 50%;
+    }
+    .right-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .paragraph-right{
+        width: 50%;
+        margin: 0;
+        text-align: center;
+        color: var(--paragraph);
+        line-height: 25px;
+    }
+    .right-container::after{
+        bottom: -180px;
+        height: 300px;
+        width: 400px;
+        
+        
+    }
+    
+}
